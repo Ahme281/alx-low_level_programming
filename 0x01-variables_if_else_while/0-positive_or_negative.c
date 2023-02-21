@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/*
- *
- * main - Prints if number is +ve , -ve or zero
+/**
+ * main - Prints if number is positive , negativeve or zero
  * Retutn: Always (Success)
  */
 int main(void)
