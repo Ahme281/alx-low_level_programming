@@ -3,7 +3,7 @@
 /**
  * main -  prints all single digit numbers of base 10 starting from 0
  * followed by a new line.
- * Reaturn: 0 (Success)
+ * Return: 0 (Success)
  */
 
 int main(void)
@@ -14,6 +14,7 @@ int main(void)
 	while (i < 10)
 	{
 		putchar(i);
+		i++;
 	}
 		putchar('\n');
 		return (0);
