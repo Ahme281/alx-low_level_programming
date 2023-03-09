@@ -1,24 +1,35 @@
 #include "main.h"
-/* Helper function that returns 1 if n is a perfect square and 0 otherwise */
-int is_perfect_square(int n)
+/**
+ * sqrt_helper - helper function to find square root recursively
+ * @n: number to find square root of
+ * @i: integer to test if it is square root of n
+ * Return: natural square root of n or -1
+ * if n has no natural square root
+ */
+int sqrt_helper(int n, int i)
 {
-	int i = 1;
-	while (i * i < n)
+	if (i * i > n)
 	{
-		i++;
+		return (-1);
 	}
-	return (i * i == n);
+	if (i * i == n)
+	{
+		return (i);
+	}
+	return (sqrt_helper(n, i + 1));
 }
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number to find square root of
+ *
+ * Return: natural square root of n or -1 if n has no natural square root
+ */
 int _sqrt_recursion(int n)
 {
-	if (n  < 0)
-		return (-1);
-	if (n == 0 || n == 1)
-		return (n);
-	if (is_perfect_square(n))
+	if (n < 0)
 	{
-		return _sqrt_recursion(n - 1) + 1;;
+		return (-1);
 	}
-	return -1;
-}
+		return (sqrt_helper(n, 0));
+	}
 
