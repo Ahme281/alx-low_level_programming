@@ -2,16 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * struct fmt - a format type and function to print it
- * @type: the format type
- * @func: the function to print it
- */
-typedef struct fmt
-{
-	char *type;
-	void (*func)(va_list);
-} fmt_t;
-/**
  * print_int - prints an int
  * @args: the list of arguments
  *

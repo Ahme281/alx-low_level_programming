@@ -2,7 +2,16 @@
 #define VARIADIC_FUNCTIONS_H
 
 #include <stdarg.h>
-
+/**
+ * struct fmt - a format type and function to print it
+ * @type: the format type
+ * @func: the function to print
+ */
+typedef struct fmt
+{
+	char *type;
+	void (*func)(va_list);
+} fmt_t;
 void print_char(va_list args);
 void print_int(va_list args);
 void print_float(va_list args);
